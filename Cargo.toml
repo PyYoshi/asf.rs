@@ -3,6 +3,9 @@ name = "asf"
 version = "0.1.0"
 authors = ["PyYoshi <myoshi321go@gmail.com>"]
 
+[features]
+default = []
+
 [dependencies]
 log = "~0.3"
 nom = "~2.0"
