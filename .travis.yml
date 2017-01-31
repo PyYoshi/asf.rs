@@ -11,5 +11,5 @@ matrix:
 sudo: false
 
 script:
-  - cargo build
-  - cargo test
+  - cargo build --verbose
+  - cargo test --verbose
