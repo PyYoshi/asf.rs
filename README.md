@@ -3,6 +3,8 @@ ASF Parser in Rust with nom
 
 [![Build Status](https://travis-ci.org/PyYoshi/asf.rs.svg?branch=master)](https://travis-ci.org/PyYoshi/asf.rs)
 
+[![Build status](https://ci.appveyor.com/api/projects/status/mmyxffueqp585tx2?svg=true)](https://ci.appveyor.com/project/PyYoshi/asf-rs)
+
 # Example
 
 ```rust
