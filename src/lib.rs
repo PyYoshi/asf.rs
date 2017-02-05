@@ -42,7 +42,7 @@ pub const STREAM_PROPERTIES_OBJECT_STREAM_TYPE_VIDEO_GUID: [u8; 16] =
     [0xC0, 0xEF, 0x19, 0xBC, 0x4D, 0x5B, 0xCF, 0x11, 0xA8, 0xFD, 0x00, 0x80, 0x5F, 0x5C, 0x44,
      0x2B];
 
-#[derive(Debug)]
+#[derive(Debug,PartialEq,Eq)]
 pub struct HeaderObject {
     object_id: Vec<u8>, // 75B22630-668E-11CF-A6D9-00AA0062CE6C
     object_size: u64, // オブジェクト全体のサイズ
@@ -51,7 +51,7 @@ pub struct HeaderObject {
     reserved_2: u8, // 予約領域
 }
 
-#[derive(Debug)]
+#[derive(Debug,PartialEq,Eq)]
 pub struct FilePropertiesObject {
     object_id: Vec<u8>, // 8CABDCA1-A947-11CF-8EE4-00C00C205365
     object_size: u64, // オブジェクト全体のサイズ
@@ -68,7 +68,7 @@ pub struct FilePropertiesObject {
     max_bitrate: u32, // 送信時における最大ビットレート
 }
 
-#[derive(Debug)]
+#[derive(Debug,PartialEq,Eq)]
 pub struct StreamPropertiesObject {
     object_id: Vec<u8>, // B7DC0791-A9B7-11CF-8EE6-00C00C205365
     object_size: u64, // オブジェクト全体のサイズ
@@ -83,13 +83,13 @@ pub struct StreamPropertiesObject {
     error_correction_data: Vec<u8>,
 }
 
-#[derive(Debug)]
+#[derive(Debug,PartialEq,Eq)]
 pub struct BitrateRecord {
     flags: u16, // Stream Number(7bits), Reserved(9bits)
     average_bitrate: u32,
 }
 
-#[derive(Debug)]
+#[derive(Debug,PartialEq,Eq)]
 pub struct StreamBitratePropertiesObject {
     object_id: Vec<u8>, // 7BF875CE-468D-11D1-8D82-006097C9A2B2
     object_size: u64, // オブジェクト全体のサイズ
@@ -97,7 +97,7 @@ pub struct StreamBitratePropertiesObject {
     bitrate_records: Vec<BitrateRecord>,
 }
 
-#[derive(Debug)]
+#[derive(Debug,PartialEq,Eq)]
 pub struct DataObject {
     object_id: Vec<u8>, // 75B22636-668E-11CF-A6D9-00AA0062CE6C
     object_size: u64, // オブジェクト全体のサイズ
@@ -246,7 +246,7 @@ named!(parse_object<&[u8], Vec<u8>>,
     )
 );
 
-#[derive(Debug)]
+#[derive(Debug,PartialEq,Eq)]
 pub struct ASF {
     header_object: HeaderObject,
     file_props_object: Option<Box<FilePropertiesObject>>,
