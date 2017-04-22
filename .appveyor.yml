@@ -34,7 +34,7 @@ environment:
 
 matrix:
   allow_failures:
-    - CHANNEL: nightly
+    - channel: nightly
 
 install:
   - ps: >-
