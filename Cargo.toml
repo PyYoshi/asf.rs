@@ -8,4 +8,4 @@ default = []
 
 [dependencies]
 log = "~0.3"
-nom = "~3.2"
+nom = "~4.0"
