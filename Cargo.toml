@@ -7,5 +7,5 @@ authors = ["PyYoshi <myoshi321go@gmail.com>"]
 default = []
 
 [dependencies]
-log = "~0.3"
+log = "~0.4"
 nom = "~4.0"
