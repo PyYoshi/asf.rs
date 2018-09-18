@@ -436,7 +436,7 @@ fn parse_asf_test1() {
             panic!("Error: {:?}", a);
         }
         Err(nom::Err::Failure(a)) => {
-            panic!("Error: {:?}", a);
+            panic!("Failure: {:?}", a);
         }
     }
 }
@@ -550,7 +550,7 @@ fn parse_asf_test2() {
             panic!("Error: {:?}", a);
         }
         Err(nom::Err::Failure(a)) => {
-            panic!("Error: {:?}", a);
+            panic!("Failure: {:?}", a);
         }
     }
 }
